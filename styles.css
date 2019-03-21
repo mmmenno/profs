@@ -63,8 +63,8 @@ a, a:hover{
 	color: #ccc;
 }
 .loader {
-  border: 10px solid #f3f3f3; /* Light grey */
-  border-top: 10px solid #000; /* Blue */
+  border: 10px solid #FC3272; /* Light grey */
+  border-top: 10px solid #FFD6D2; /* Blue */
   border-radius: 50%;
   width: 60px;
   height: 60px;

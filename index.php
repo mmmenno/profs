@@ -131,8 +131,7 @@ $branchname = $data['results']['bindings'][0]['label']['value'];
 
 	function refreshMap(){
 
-		$('#straatinfo').append('<h2>Aan het laden ...</h2><div class="loader"></div>');
-
+		
 		$.ajax({
 	        type: 'GET',
 	        url: 'geojson.php?field=<?= $branch ?>',
@@ -192,6 +191,8 @@ $branchname = $data['results']['bindings'][0]['label']['value'];
 	function whenStreetClicked(){
 		var props = $(this)[0].feature.properties;
 		var info = '<h2>' + props['unilabel'] + '</h2>';
+		$('#profs').html('').append('<div class="loader"></div>');
+
 		$('#uni').html(info);
 
 		$('#profs').load('profs.php?uni=' + props['uni'] + '&field=<?= $branch ?>');
